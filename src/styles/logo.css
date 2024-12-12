@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'orbit';
+    src: url('../fonts/Orbit-Regular.ttf') format('truetype');
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'orbit';
+  }
+.logo{
+    font-family: 'orbit';
+}
