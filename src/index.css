@@ -1,23 +1,9 @@
-body {
+/* index.css */
+#root {
+  height: 100%; /* Make sure the root element takes up the full height */
+}
+
+html, body {
+  height: 100%;
   margin: 0;
-  font-family: 'orbit';
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-
-  
-
-.logo {
-  position: absolute;
-  top: 20px; /* Adjust this to your liking */
-  left: 50%;
-  transform: translateX(-50%);
 }

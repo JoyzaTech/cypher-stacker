@@ -5,7 +5,10 @@ const Logo = () => {
   return (
     <div>
       <h1 className="logo">
-        &lt;&gt;<br></br> Cipher <br /> Stacker <br />&lt;/&gt;
+        <span className="brackets">&lt;&gt;</span><br />
+        <span className="cipher">cipher</span><br />
+        <span className="stacker">stacker</span><br />
+        <span className="brackets">&lt;/&gt;</span>
       </h1>
     </div>
   );
