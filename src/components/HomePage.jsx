@@ -7,6 +7,7 @@ import IconBar from './IconBar';
 import { FaUser } from "react-icons/fa";
 import { MdLeaderboard } from "react-icons/md";
 import { FaQuestion } from "react-icons/fa";
+import '../styles/HomePage.css';
 
 const HomePage = () => {
   const customIcons = [
@@ -18,7 +19,7 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <Logo />
-      
+
       {/* Play button, which navigates to /play */}
       <Link to="/play">
         <Button
@@ -43,6 +44,6 @@ const HomePage = () => {
       />
     </div>
   );
-}
+};
 
 export default HomePage;

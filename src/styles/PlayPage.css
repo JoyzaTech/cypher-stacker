@@ -1,0 +1,45 @@
+/* General page styling */
+.play-page {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;    /* Center items horizontally */
+    justify-content: flex-start; /* Start content below the IconBar */
+    height: 100vh;          /* Full viewport height */
+    padding-top: 100px;     /* Space for the IconBar and logo */
+    box-sizing: border-box; /* Include padding in height/width calculations */
+  }
+  
+  /* Styling for the IconBar */
+  .icon-bar {
+    position: absolute;
+    top: 20px;              /* Position IconBar at the top */
+    left: 50%;              /* Center horizontally */
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;              /* Space between icons */
+    color: white;
+    z-index: 10;            /* Ensure it stays above other elements */
+  }
+  
+  /* Logo styling */
+  .logo {
+    position: relative;     /* Works within the layout flow */
+    margin-top: -30px;       /* Space below the IconBar */
+    text-align: center;     /* Center-align the logo */
+    z-index: 5;             /* Ensure it doesn't overlap the IconBar */
+    font-size: 1.5rem;        /* Default size for large screens */
+    line-height: 1.2;       /* Adjust spacing between lines */
+  }
+  
+  /* Responsive logo scaling */
+  @media (max-width: 768px) {
+    .logo {
+      font-size: 1.1rem;    /* Scale down for tablets/small screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 1rem;      /* Scale down further for mobile devices */
+    }
+  }

@@ -9,15 +9,25 @@ body {
   background-color: #000; /* Optional: Dark background for visibility */
 }
 
+.icon-bar {
+  position: absolute;
+  top: 10px; /* Space from the top of the page */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 20; /* Ensure the IconBar stays above other elements */
+}
+
 .logo {
   font-family: 'orbit';
   color: white;
-  position: relative; /* Remain within the layout flow */
-  margin-top: 20px; /* Spacing above the logo */
+  position: relative; /* Stay within the layout flow */
+  margin-top: 60px; /* Space below the IconBar */
   text-align: center; /* Center-align the logo */
-  line-height: 1.2; /* Adjust line spacing for the logo */
+  line-height: 1.2; /* Compact line spacing */
   font-weight: 80;
-  z-index: 10; /* Ensure the logo stays above other elements */
+  z-index: 10; /* Ensure it stays above other elements if necessary */
 }
 
 .brackets {
@@ -40,9 +50,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Ensure the layout starts from the top */
+  justify-content: flex-start; /* Ensure layout starts from the top */
   height: 100vh;
-  padding-top: 20px; /* Adjust for logo and prevent overlap */
+  padding-top: 10px; /* Ensure enough space for the logo and IconBar */
   box-sizing: border-box;
 }
 
