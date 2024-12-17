@@ -5,7 +5,7 @@
     align-items: center;    /* Center items horizontally */
     justify-content: flex-start; /* Start content below the IconBar */
     height: 100vh;          /* Full viewport height */
-    padding-top: 100px;     /* Space for the IconBar and logo */
+    padding-top: 60px;     /* Space for the IconBar and logo */
     box-sizing: border-box; /* Include padding in height/width calculations */
   }
   
@@ -24,7 +24,7 @@
   /* Logo styling */
   .logo {
     position: relative;     /* Works within the layout flow */
-    margin-top: -30px;       /* Space below the IconBar */
+    margin-top: 0px;       /* Space below the IconBar */
     text-align: center;     /* Center-align the logo */
     z-index: 5;             /* Ensure it doesn't overlap the IconBar */
     font-size: 1.5rem;        /* Default size for large screens */
@@ -41,5 +41,48 @@
   @media (max-width: 480px) {
     .logo {
       font-size: 1rem;      /* Scale down further for mobile devices */
+    }
+  }
+
+/* Grid container for the input boxes */
+.grid-container {
+    display: grid;
+    gap: 10px; /* Space between grid boxes */
+    justify-content: center; /* Center the grid horizontally */
+    margin-top: 30px; /* Space between the logo and grid */
+  }
+  
+  /* Input boxes styled like grid boxes */
+  .grid-box {
+    width: 50px; /* Width of each box */
+    height: 50px; /* Height of each box */
+    border: 1px solid white; /* White border for visibility */
+    background-color: rgba(47, 47, 47, 0.8); /* Dark background with transparency */
+    color: white;
+    text-align: center; /* Center the text inside */
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    outline: none; /* Remove default outline */
+    caret-color: white; /* Cursor color */
+  }
+  
+  .grid-box:focus {
+    border-color: #00bcd4; /* Highlight border color when focused */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .grid-box {
+      width: 40px;
+      height: 40px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid-box {
+      width: 30px;
+      height: 30px;
+      font-size: 0.8rem;
     }
   }
