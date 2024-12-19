@@ -1,23 +1,23 @@
 /* index.css */
 html, body {
   height: 100%;
+  width: 100%;
   margin: 0;
+  padding: 0;
+
+  /* Background image settings */
+  background-image: url('../public/images/background.png'); /* Path to your image */
+  background-repeat: repeat-y; /* Repeat image vertically only */
+  background-position: top center; /* Center image horizontally, start at the top */
+  background-size: 100% auto; /* Stretch to full width, maintain aspect ratio */
 }
 
 /* App container */
 .app-container {
-  text-align: center;
   min-height: 100vh;
   display: flex;
-  flex-direction: column; /* This stacks elements vertically */
-  align-items: center;    /* Horizontally centers elements */
-  justify-content: center; /* Vertically centers elements */
-
-  /* Add background image */
-  background-image: url('../public/images/background.png'); /* Path to your image */
-  background-size: cover; /* Ensures the image covers the whole screen */
-  background-position: center; /* Moves the image 50px more to the right */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;    /* Center content horizontally */
+  justify-content: flex-start; /* Align content to the top */
+  box-sizing: border-box; /* Ensure padding/margin doesn't affect layout */
 }
-

@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Routes instead of Switch
 import HomePage from './components/HomePage'; // HomePage component with content moved here
 import PlayPage from './components/PlayPage'; // PlayPage component for the game page
+import Leaderboard from './components/Leaderboard'; // Leaderboard component
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} /> {/* Render HomePage for "/" route */}
           <Route path="/play" element={<PlayPage />} /> Render PlayPage for "/play" route
+          <Route path="/leaderboard" element={<Leaderboard />} /> 
         </Routes>
       </div>
     </Router>

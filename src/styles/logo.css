@@ -1,25 +1,3 @@
-@font-face {
-  font-family: 'orbit';
-  src: url('../fonts/Orbit-Regular.ttf') format('truetype');
-}
-
-body {
-  margin: 0;
-  font-family: 'orbit';
-  background-color: #000; /* Optional: Dark background for visibility */
-}
-
-.logo {
-  font-family: 'orbit';
-  color: white;
-  position: relative; /* Remain within the layout flow */
-  margin-top: 20px; /* Spacing above the logo */
-  text-align: center; /* Center-align the logo */
-  line-height: 1.2; /* Adjust line spacing for the logo */
-  font-weight: 80;
-  z-index: 10; /* Ensure the logo stays above other elements */
-}
-
 .brackets {
   display: inline-block;
   text-align: left;
@@ -40,12 +18,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Ensure the layout starts from the top */
-  height: 100vh;
-  padding-top: 20px; /* Adjust for logo and prevent overlap */
-  box-sizing: border-box;
+  justify-content: flex-start; /* Prevent overlap with IconBar */
+  height: 100vh; /* Full viewport height */
+  padding-top: 0; /* Remove excess padding */
+  box-sizing: border-box; /* Consistent box model */
 }
 
-.primary-btn {
-  margin: 10px 0;
-}

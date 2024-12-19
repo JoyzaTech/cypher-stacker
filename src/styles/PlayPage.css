@@ -1,88 +1,255 @@
 /* General page styling */
 .play-page {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center;    /* Center items horizontally */
-    justify-content: flex-start; /* Start content below the IconBar */
-    height: 100vh;          /* Full viewport height */
-    padding-top: 60px;     /* Space for the IconBar and logo */
-    box-sizing: border-box; /* Include padding in height/width calculations */
-  }
-  
-  /* Styling for the IconBar */
-  .icon-bar {
-    position: absolute;
-    top: 20px;              /* Position IconBar at the top */
-    left: 50%;              /* Center horizontally */
-    transform: translateX(-50%);
-    display: flex;
-    gap: 20px;              /* Space between icons */
-    color: white;
-    z-index: 10;            /* Ensure it stays above other elements */
-  }
-  
-  /* Logo styling */
-  .logo {
-    position: relative;     /* Works within the layout flow */
-    margin-top: 0px;       /* Space below the IconBar */
-    text-align: center;     /* Center-align the logo */
-    z-index: 5;             /* Ensure it doesn't overlap the IconBar */
-    font-size: 1.5rem;        /* Default size for large screens */
-    line-height: 1.2;       /* Adjust spacing between lines */
-  }
-  
-  /* Responsive logo scaling */
-  @media (max-width: 768px) {
-    .logo {
-      font-size: 1.1rem;    /* Scale down for tablets/small screens */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .logo {
-      font-size: 1rem;      /* Scale down further for mobile devices */
-    }
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding-top: 60px;
+  box-sizing: border-box;
+  width: 100%;
+}
 
 /* Grid container for the input boxes */
 .grid-container {
-    display: grid;
-    gap: 10px; /* Space between grid boxes */
-    justify-content: center; /* Center the grid horizontally */
-    margin-top: 30px; /* Space between the logo and grid */
-  }
-  
-  /* Input boxes styled like grid boxes */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 20px 20px;
+  justify-items: center;
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+/* Input boxes styled like grid boxes */
+.grid-box {
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  background-color: rgba(47, 47, 47, 0.8);
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  outline: none;
+  caret-color: white;
+}
+
+.grid-box:focus {
+  border-color: #00bcd4;
+}
+
+/* Text area below the logo */
+.text-area {
+  display: flex;
+  flex-direction: column; /* Stack rectangles vertically */
+  gap: 20px; /* Space between rectangles */
+  margin: 20px 0; /* Space between the logo and text area */
+  width:50%;
+  max-width: 400px; /* Limit width for a consistent layout */
+}
+
+/* Text values styled as rounded rectangles */
+.text-box {
+  background-color: rgba(47, 47, 47, 0.8);
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 10px 20px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.text-box p {
+  margin: 5px 0; /* Space between text lines */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .grid-box {
-    width: 50px; /* Width of each box */
-    height: 50px; /* Height of each box */
-    border: 1px solid white; /* White border for visibility */
-    background-color: rgba(47, 47, 47, 0.8); /* Dark background with transparency */
-    color: white;
-    text-align: center; /* Center the text inside */
-    font-size: 1.2rem;
-    box-sizing: border-box;
-    outline: none; /* Remove default outline */
-    caret-color: white; /* Cursor color */
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
   }
-  
-  .grid-box:focus {
-    border-color: #00bcd4; /* Highlight border color when focused */
+
+  .text-box {
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .grid-box {
-      width: 40px;
-      height: 40px;
-      font-size: 0.9rem;
-    }
+}
+
+@media (max-width: 480px) {
+  .grid-box {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
   }
-  
-  @media (max-width: 480px) {
-    .grid-box {
-      width: 30px;
-      height: 30px;
-      font-size: 0.8rem;
-    }
+
+  .text-box {
+    font-size: 0.8rem;
+    padding: 6px 12px;
   }
+}
+/* Submission area styling */
+.submission-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px; /* Space between submission field and buttons */
+}
+
+/* Submission field container */
+.submission-field {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Back button and level field */
+/* Container for Back Arrow and Level Number */
+.back-and-level {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  justify-content: center; /* Center the content horizontally */
+  gap: 10px; /* Space between back arrow and level number */
+  margin-top: 20px; /* Space below the logo */
+  width: 100%; /* Take up full width for centering */
+}
+
+/* Back Arrow Styling */
+.back-arrow {
+  font-size: 1.2rem; /* Adjust size */
+  color: white;
+  cursor: pointer; /* Show pointer on hover */
+}
+
+/* Level Field Styling */
+.level-field {
+  width: 90px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 15px;
+  background-color: rgba(61, 142, 0, 0.8);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 0.rem;
+  outline: none;
+  padding: 5px;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.level-field:focus {
+  border-color: white; /* No highlight on focus since it's read-only */
+}
+
+/* Submission area and other styles remain unchanged */
+/* Existing styles... */
+
+/* Submission box styling */
+.submission-box {
+  flex-grow: 1; /* Take remaining space */
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 15px;
+  background-color: rgba(47, 47, 47, 0.8);
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.submission-box:focus {
+  border-color: #00bcd4;
+}
+
+/* Button group styling */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+}
+
+/* Submit button styling */
+.submit-button,
+.quit-button {
+  width: 120px;
+  height: 40px;
+  background-color: #00bcd4;
+  color: white;
+  border: solid;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  font-family: monospace;
+  opacity: 85%;
+}
+
+.submit-button:hover,
+.quit-button:hover {
+  background-color: #0097a7;
+}
+
+.submit-button:active,
+.quit-button:active {
+  background-color: #006064;
+}
+
+/* Quit button styling */
+.quit-button {
+  background-color: #f44336;
+  margin-bottom: 35px;
+}
+
+.quit-button:hover {
+  background-color: #d32f2f;
+}
+
+.quit-button:active {
+  background-color: #b71c1c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .submission-box {
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .submit-button,
+  .quit-button {
+    width: 100px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .submission-box {
+    height: 35px;
+    font-size: 0.8rem;
+  }
+
+  .submit-button,
+  .quit-button {
+    width: 90px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+}
+
+.logo{
+  margin-top: 10px;
+}
+
+.active-icon{
+  color:blue;
+}
+
+.white-icon{
+  color: white;
+}

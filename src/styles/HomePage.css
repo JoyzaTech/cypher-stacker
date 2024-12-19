@@ -17,17 +17,19 @@ body {
   display: flex;
   gap: 20px;
   z-index: 20; /* Ensure the IconBar stays above other elements */
+  color: white;
 }
 
 .logo {
   font-family: 'orbit';
   color: white;
   position: relative; /* Stay within the layout flow */
-  margin-top: 60px; /* Space below the IconBar */
+  margin-top: 100px; /* Space below the IconBar */
   text-align: center; /* Center-align the logo */
   line-height: 1.2; /* Compact line spacing */
-  font-weight: 80;
-  z-index: 10; /* Ensure it stays above other elements if necessary */
+  font-weight: 400; /* Better visual balance */
+  font-size: 2rem; /* Default font size */
+  z-index: 10; /* Ensure it stays above other elements */
 }
 
 .brackets {
@@ -52,10 +54,34 @@ body {
   align-items: center;
   justify-content: flex-start; /* Ensure layout starts from the top */
   height: 100vh;
-  padding-top: 10px; /* Ensure enough space for the logo and IconBar */
+  padding-top: 60px; /* Ensure space for the IconBar */
   box-sizing: border-box;
 }
 
 .primary-btn {
-  margin: 10px 0;
+  margin: 20px 0; /* Add spacing between buttons */
+  position: relative;
+  top: 0; /* Reset top offset */
+}
+
+/* Responsive logo adjustments */
+@media (max-width: 768px) {
+  .logo {
+    margin-top: 80px; /* Adjust spacing for tablets */
+    font-size: 1.5rem; /* Scale down the font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    margin-top: 60px; /* Adjust spacing for smaller screens */
+    font-size: 1.2rem; /* Smaller font size for mobile devices */
+  }
+}
+.active-icon{
+  color:blue;
+}
+
+.white-icon{
+  color: white;
 }

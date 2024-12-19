@@ -11,13 +11,18 @@ import '../styles/HomePage.css';
 
 const HomePage = () => {
   const customIcons = [
-    <MdLeaderboard />,
-    <FaUser />,
-    <FaQuestion />,
+    <Link to="/leaderboard"><MdLeaderboard className='white-icon'/></Link>,
+    <FaUser className='white-icon'/>,
+    <FaQuestion className='white-icon'/>,
   ];
 
   return (
     <div className="home-page">
+            <IconBar
+        icons={customIcons}
+        size="20px"
+        color="white"
+      />
       <Logo />
 
       {/* Play button, which navigates to /play */}
@@ -37,11 +42,7 @@ const HomePage = () => {
       />
 
       {/* Icon bar at the bottom */}
-      <IconBar
-        icons={customIcons}
-        size="20px"
-        color="white"
-      />
+
     </div>
   );
 };

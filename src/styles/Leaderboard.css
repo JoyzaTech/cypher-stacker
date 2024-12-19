@@ -1,0 +1,35 @@
+/* Assuming your top bar styles are defined elsewhere */
+
+.leaderboard-container {
+    display: flex; /* Allow header and table to stack vertically */
+    flex-direction: column; /* Stack header on top of table */
+    width: 100%; /* Take up full width */
+    margin: 0 auto; /* Center horizontally */
+  }
+  
+  .leaderboard-header {
+    /* Add styles for your top bar here */
+    /* Consider reusing existing top bar styles for consistency */
+    padding: 1rem;
+    background-color: #f0f0f0;
+  }
+  
+  h2 {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f0f0f0;
+  }
